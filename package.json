@@ -1,0 +1,13 @@
+{
+  "name": "rise-sentinel-client",
+  "version": "0.1.0",
+  "description": "rise-sentinel client",
+  "main": "client.js",
+  "repository": "https://github.com/jarenal/rise-sentinel-client.git",
+  "author": "Jose Antonio <jguidos@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "log4js": "^6.1.2",
+    "socket.io-client": "^2.3.0"
+  }
+}
