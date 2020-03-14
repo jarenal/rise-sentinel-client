@@ -18,7 +18,9 @@ const logger = log4js.getLogger('default');
 socket.on('connect', function(){
     let role = config.forging.secret.length ? "master" : "slave";
     logger.info('Connected to ' + settings.sentinelHost + ' as ' + role);
-    socket.emit('greeting', {...settings, "role": role});
+    let newSettings = {...settings, "role": role};
+    delete newSettings.secret;
+    socket.emit('greeting', newSettings);
 });
 
 socket.on('promote', function(){
